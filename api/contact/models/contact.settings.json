@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts",
+  "info": {
+    "name": "contact",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "contact_content": {
+      "type": "text"
+    },
+    "contact_title": {
+      "type": "string"
+    },
+    "contact_address": {
+      "type": "text"
+    },
+    "contact_mail": {
+      "type": "string"
+    },
+    "contact_number": {
+      "type": "integer"
+    },
+    "date": {
+      "type": "date"
+    },
+    "contact_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
